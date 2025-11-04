@@ -1,0 +1,25 @@
+#include <iostream>
+#include <list>
+#include <array>  // for std::array
+
+using namespace std;
+
+int main() {
+    // Create a list of arrays (each array has 3 integers)
+    list<array<int, 3>> arrList = {
+        { {1, 2, 3} },
+        { {4, 5, 6} },
+        { {7, 8, 9} }
+    };
+
+    // Print all arrays from the list
+    cout << "Elements in the list of arrays:\n";
+    for (const auto& arr : arrList) {
+        for (int num : arr) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
